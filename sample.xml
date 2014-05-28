@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <id>Resource Id (integer)</id>
+    <name>Resource name</name>
+    <URI>http://www.example.com/ipt/archive.do?r=resource</URI>
+    <format>dwca</format>
+</config>
