@@ -23,7 +23,7 @@ and then make a copy of the file <code>bourgogne/src/resources/META-INF/persiste
 in the same location and name it <code>persistence.xml</code>. In <code>persistence.xml</code>, change database, user and 
 password accordingly to your installation.
 
-You can either create the table by running <code>mysql yourdatabase -u root -p <bourgogne.sql</code> (preferred solution)
+You can either create the table by running <code>mysql yourdatabase -u root -p <&lt; bourgogne.sql</code> (preferred solution)
 or by letting the program create it during its first run. But you will need then to create
 different indexes for better performance for future use:
 <code>
