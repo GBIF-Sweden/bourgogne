@@ -14,32 +14,29 @@ Documents are stored as zipped JSON objects.
 
 Requirement
 -----------
-MySQL and Java JDK 1.7 and an internet connection.
+MySQL 5.5 and Java JDK 1.7 and an internet connection.
 
 Installation
 ------------
 Before running the program for the first time, you need to create a database first 
-and then copy the file <code>bourgogne/src/resources/META-INF/persistence_vanilla.xml</code>
-in the same location as <code>persistence.xml</code> and change database, user and 
+and then make a copy of the file <code>bourgogne/src/resources/META-INF/persistence_vanilla.xml</code>
+in the same location and name it <code>persistence.xml</code>. In <code>persistence.xml</code>, change database, user and 
 password accordingly to your installation.
 
-You can either create the table with running
-<code>
-mysql yourdatabase -u root -p <bourgogne.sql
-</code>
-or let the program create it during its first run. But you will need then to create
+You can either create the table by running <code>mysql yourdatabase -u root -p <bourgogne.sql</code> (preferred solution)
+or by letting the program create it during its first run. But you will need then to create
 different indexes for better performance for future use:
 <code>
-CREATE INDEX datasetId_idx ON entities(datasetId);
-CREATE INDEX originalUID_idx ON entities(originalUID);
-CREATE INDEX updated_idx ON entities(updated DESC);
-CREATE INDEX deleted_idx ON entities(datasetid, deleted);
-CREATE INDEX processed_idx ON entities(datasetid, processed);
-
-CREATE INDEX dt_idx ON transactions(dt DESC);
-CREATE INDEX entityId_idx ON transactions(entityId);
-CREATE INDEX coordinates_idx ON transactions(coordinates);
-CREATE INDEX coll_inst_idx ON transactions(collectioncode, institutioncode);
+CREATE INDEX datasetId_idx ON entities(datasetId);<br>
+CREATE INDEX originalUID_idx ON entities(originalUID);<br>
+CREATE INDEX updated_idx ON entities(updated DESC);<br>
+CREATE INDEX deleted_idx ON entities(datasetid, deleted);<br>
+CREATE INDEX processed_idx ON entities(datasetid, processed);<br>
+<br>
+CREATE INDEX dt_idx ON transactions(dt DESC);<br>
+CREATE INDEX entityId_idx ON transactions(entityId);<br>
+CREATE INDEX coordinates_idx ON transactions(coordinates);<br>
+CREATE INDEX coll_inst_idx ON transactions(collectioncode, institutioncode);<br>
 </code>
 
 Run
