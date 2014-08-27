@@ -25,7 +25,7 @@ password accordingly to your installation.
 
 You can either create the table by running <code>mysql yourdatabase -u root -p &lt; bourgogne.sql</code> (preferred solution)
 or by letting the program create it during its first run. But you will need then to create
-different indexes for better performance for future use:<br>
+different indexes for better performance for future use:  
 <code>
 CREATE INDEX datasetId_idx ON entities(datasetId);  
 CREATE INDEX originalUID_idx ON entities(originalUID);  
