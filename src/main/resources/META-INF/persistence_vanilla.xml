@@ -3,6 +3,7 @@
   <persistence-unit name="bourgognePU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>se.gbif.bourgogne.models.Entities</class>
+    <class>se.gbif.bourgogne.models.Transactions</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/database?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.password" value="password"/>

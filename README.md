@@ -26,17 +26,17 @@ password accordingly to your installation.
 You can either create the table by running <code>mysql yourdatabase -u root -p &lt; bourgogne.sql</code> (preferred solution)
 or by letting the program create it during its first run. But you will need then to create
 different indexes for better performance for future use:  
-<code>
-CREATE INDEX datasetId_idx ON entities(datasetId);  
-CREATE INDEX originalUID_idx ON entities(originalUID);  
-CREATE INDEX updated_idx ON entities(updated DESC);  
-CREATE INDEX deleted_idx ON entities(datasetid, deleted);  
-CREATE INDEX processed_idx ON entities(datasetid, processed);  
+
+<code>CREATE INDEX datasetId_idx ON entities(datasetId);</code>  
+<code>CREATE INDEX originalUID_idx ON entities(originalUID);</code>  
+<code>CREATE INDEX updated_idx ON entities(updated DESC);</code>  
+<code>CREATE INDEX deleted_idx ON entities(datasetid, deleted);</code>  
+<code>CREATE INDEX processed_idx ON entities(datasetid, processed);</code>  
   
-CREATE INDEX dt_idx ON transactions(dt DESC);  
-CREATE INDEX entityId_idx ON transactions(entityId);  
-CREATE INDEX coordinates_idx ON transactions(coordinates);  
-CREATE INDEX coll_inst_idx ON transactions(collectioncode, institutioncode);  
+<code>CREATE INDEX dt_idx ON transactions(dt DESC);</code>  
+<code>CREATE INDEX entityId_idx ON transactions(entityId);</code>  
+<code>CREATE INDEX coordinates_idx ON transactions(coordinates);</code>  
+<code>CREATE INDEX coll_inst_idx ON transactions(collectioncode, institutioncode);</code>  
 </code>
 
 Run
